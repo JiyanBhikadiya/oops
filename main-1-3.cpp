@@ -1,0 +1,9 @@
+#include <iostream>
+
+extern int num_count(int array[], int n, int number);
+int main(){
+    int array[5] = {1,2,3,2,1};
+
+    std::cout<<num_count(array,5,2)<<std::endl;
+    return 0;
+}
