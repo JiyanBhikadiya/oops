@@ -9,6 +9,8 @@ bool is_fanarray(int array[], int n){
         median = n/2 + 1;
     }
 
+    // std::cout<<median<<std::endl;
+
     int firsthalf[median],secondhalf[median];
     int flag = 0;
 
@@ -17,7 +19,15 @@ bool is_fanarray(int array[], int n){
     for(int i = 0;i<median;i++){
         firsthalf[i] = array[i];
     }
-    int count = median-1;
+
+    int count;
+    if(n%2 == 0){
+        count = median;
+    }
+    else{
+        count = median-1;
+    }
+
     for(int i=0;i<median;i++){
         secondhalf[i] = array[count];
         count++;
