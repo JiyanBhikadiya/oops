@@ -1,7 +1,7 @@
 #include <iostream>
 
 double array_mean(int array[],int n){    
-    if(n<1){
+    if(n<1){ //checking if condition
         return 0.0;
     }
     else{
@@ -11,7 +11,7 @@ double array_mean(int array[],int n){
             sum += array[i];
         }
 
-        double avg = (double)sum / n;   
+        double avg = (double)sum / n; //calculating average   
         return avg;
     }
 }

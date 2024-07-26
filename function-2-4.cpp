@@ -4,9 +4,9 @@ bool is_ascending(int array[],int n){
 
     if(n > 0){
         int flag = 0;
-        for(int i=0;i<n;i++){            
+        for(int i=0;i<n;i++){   //creating a loop to check whether the array is in ascending order or not  
             for(int j=i;j<n;j++){
-                if(array[j] < array[i]){
+                if(array[j] < array[i]){ //checking if condition
                     flag = 1;
                 }
             }

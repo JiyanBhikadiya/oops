@@ -3,21 +3,24 @@
 bool is_fanarray(int array[], int n){
     int median;
     if(n%2 == 0){
-        median = n/2;
+        median = n/2; //calculating median
     }
     else{
-        median = n/2 + 1;
+        median = n/2 + 1; //increasing median by 1 if there are odd number of elements
     }
-
-    // std::cout<<median<<std::endl;
 
     int firsthalf[median],secondhalf[median];
     int flag = 0;
 
-    // firsthalf[0] = array[0];
-
+    //placing starting elements in a new array
     for(int i = 0;i<median;i++){
         firsthalf[i] = array[i];
+    }
+
+    //placing ending elements in a new array
+    for(int i=0;i<median;i++){
+        secondhalf[i] = array[count];
+        count++;
     }
 
     int count;
@@ -28,15 +31,7 @@ bool is_fanarray(int array[], int n){
         count = median-1;
     }
 
-    for(int i=0;i<median;i++){
-        secondhalf[i] = array[count];
-        count++;
-    }
-
-    // std::cout<<array[0]<<array[1]<<array[2]<<std::endl;
-    // std::cout<<firsthalf[0]<<firsthalf[1]<<firsthalf[2]<<std::endl;
-
-    for(int i=0;i<median;i++){            
+    for(int i=0;i<median;i++){ //placing the first elements in ascending order
         for(int j=i;j<median;j++){
             if(firsthalf[j] < firsthalf[i]){
                 flag = 1;
@@ -44,7 +39,7 @@ bool is_fanarray(int array[], int n){
         }
     }
 
-    for(int i=0;i<median;i++){
+    for(int i=0;i<median;i++){ //placing the first elements in descending order
         for(int j=i;j<median;j++){
             if(secondhalf[j] > secondhalf[i]){
                 flag = 1;
@@ -54,7 +49,7 @@ bool is_fanarray(int array[], int n){
 
     int k = median-1;
     for(int i=0;i<median;i++){
-        if(firsthalf[i] != secondhalf[k]){
+        if(firsthalf[i] != secondhalf[k]){ //checking whether the elements are same for palindrome or not
             flag = 1;
         }
         k--;
@@ -66,5 +61,4 @@ bool is_fanarray(int array[], int n){
     else{
         return true;
     }
-    // return 1;
 }

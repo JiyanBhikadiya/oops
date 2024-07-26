@@ -6,7 +6,7 @@ int median_array(int array[], int n){
         return 0;
     }
     else{
-        for(int i=0;i<n;i++){
+        for(int i=0;i<n;i++){ //sorting the array elements in ascending order
             int temp;
             for(int j=i;j<n;j++){
                 if(array[j] < array[i]){
@@ -17,7 +17,7 @@ int median_array(int array[], int n){
             }
         }
 
-        int median = array[n/2];
+        int median = array[n/2]; //finding the median of the array
 
         return median;
     }

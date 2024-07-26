@@ -5,7 +5,7 @@ int count_evens(int number){
 
     for(int i=0;i<number;i++){
         if(i%2 == 0){
-            count++;
+            count++; //counting number of even numbers within a range
         }
     }
 
