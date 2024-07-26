@@ -17,18 +17,18 @@ bool is_fanarray(int array[], int n){
         firsthalf[i] = array[i];
     }
 
-    //placing ending elements in a new array
-    for(int i=0;i<median;i++){
-        secondhalf[i] = array[count];
-        count++;
-    }
-
     int count;
     if(n%2 == 0){
         count = median;
     }
     else{
         count = median-1;
+    }
+
+    //placing ending elements in a new array
+    for(int i=0;i<median;i++){
+        secondhalf[i] = array[count];
+        count++;
     }
 
     for(int i=0;i<median;i++){ //placing the first elements in ascending order
