@@ -1,10 +1,10 @@
 #include <iostream>
 
-extern void count_digits(int array[4][4]);
+extern void count_digits(int array[4][4]); //defining the function
 int main(){
 
     int array[4][4] = {{0,1,2,3},{4,5,6,7},{8,9,0,1},{2,3,4,5}};
 
-    count_digits(array);
+    count_digits(array); //calling count_digits and passing aarray as parameter
     return 0;
 }

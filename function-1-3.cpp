@@ -4,20 +4,20 @@ void count_digits(int array[4][4]){
     int result[10][2];
 
     for(int i=0;i<10;i++){
-        result[i][0] = i;
-        result[i][1] = 0;
+        result[i][0] = i; //assigning 0-9 in the first column
+        result[i][1] = 0; //assigning 0 in the second column which is the count
     }
 
     for(int i=0;i<4;i++){
         for(int j=0;j<4;j++){
-            switch (array[i][j])
+            switch (array[i][j]) //setting up a switch case to check for every digit
             {
             case 0:
-                result[0][1]++;
+                result[0][1]++; //increasing count value
                 break;
             case 1:
                 result[1][1]++;
-                break;
+                break; //breaking the case to prevent increment of the rest
             case 2:
                 result[2][1]++;
                 break;
@@ -49,7 +49,7 @@ void count_digits(int array[4][4]){
     }
 
     for(int i=0;i<10;i++){
-        std::cout<<result[i][0]<<":"<<result[i][1]<<";";
+        std::cout<<result[i][0]<<":"<<result[i][1]<<";"; //printing the output as per requirments
     }
 
     std::cout<<std::endl;
