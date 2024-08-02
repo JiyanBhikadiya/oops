@@ -28,7 +28,7 @@ int array_min(int integers[],int length){
         }
     }
 
-    cout<<min<<endl;
+    // cout<<min<<endl;
     
     return min;
 }
@@ -42,7 +42,7 @@ int array_max(int integers[],int length){
         }
     }
 
-    cout<<max<<endl;
+    // cout<<max<<endl;
 
     return max;
 }
