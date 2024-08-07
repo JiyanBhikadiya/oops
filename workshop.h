@@ -12,16 +12,14 @@ void printArray(double* x,int y){
     std::cout<<std::endl;
 }
 
-double* dynamicArray(int x){
-    double* array = new(std::nothrow) double[x];
+double arrayMax(double* x,int y){
+    double max = x[0];
 
-    if(array == nullptr){
-        std::cerr<<"memory allocation failed"<<std::endl;
+    for(int i=0;i<y;i++){
+        if(x[i] > max){
+            max = x[i];
+        }
     }
 
-    for(int i=0;i<x;i++){
-        array[i] = static_cast<double>(i);
-    }
-
-    return array;
+    return max;
 }
