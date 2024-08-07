@@ -25,7 +25,8 @@ double arrayMax(double* x,int y){
 }
 
 double* dynamicArray(int x, double* array2){
-    double* new_array = new(std::nothrow) double[x];
+    // double* new_array = new(std::nothrow) double[x];
+    double* new_array = new double[x];
 
     if(new_array == nullptr){
         std::cerr<<"Memory allocation failed"<<std::endl;
@@ -37,4 +38,5 @@ double* dynamicArray(int x, double* array2){
     }
 
     return new_array;
+    delete[] new_array;
 }
