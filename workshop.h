@@ -23,3 +23,18 @@ double arrayMax(double* x,int y){
 
     return max;
 }
+
+double* dynamicArray(int x, double* array2){
+    double* new_array = new(std::nothrow) double[x];
+
+    if(new_array == nullptr){
+        std::cerr<<"Memory allocation failed"<<std::endl;
+        return nullptr;
+    }
+
+    for(int i=0;i<x;i++){
+        new_array[i] = array2[i];
+    }
+
+    return new_array;
+}
