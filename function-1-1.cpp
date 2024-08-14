@@ -12,8 +12,6 @@ int* readNumbers(){
 
 void printNumbers(int *numbers,int length){
     for(int i=0;i<length;i++){
-        std::cout<<i<<" "<<numbers[i]<<"\n";
+        std::cout<<i<<" "<<numbers[i]<<std::endl;
     }
-
-    std::cout<<std::endl;
 }
