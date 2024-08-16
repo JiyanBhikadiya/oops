@@ -8,7 +8,7 @@ PersonList createPersonList(int n){
     list.numPeople = n;
 
     for(int i=0;i<n;i++){
-        list.people[i].name = "John Doe";
+        list.people[i].name = "Jahn Doe";
         list.people[i].age = 0;
     }
 
