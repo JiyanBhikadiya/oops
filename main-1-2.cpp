@@ -4,7 +4,7 @@
 
 int main() {
     // create an empty orchestra
-    Orchestra orchestra(0);
+    Orchestra orchestra(5);
 
     // create some musicians
     Musician m1("violin", 5);
