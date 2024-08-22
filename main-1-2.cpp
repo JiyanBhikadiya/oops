@@ -41,7 +41,7 @@ int main(){
 
     cout<<"Total number of trucks = "<<yard.get_total_stock_count()<<endl;
 
-    cout<<"Truck with code 2005 has count of "<<yard.get_stock_count(2005)<<endl;
+    cout<<"Truck with code 2005 has count of "<<yard.get_stock_count(1999)<<endl;
 
     Truck* all_trucks = yard.get_current_stock_list();
     for(int i=0;i<yard.get_total_stock_count();i++){
