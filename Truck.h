@@ -12,11 +12,11 @@ class Truck{
         int brand_code_number;
 
     public:
-        Truck();
-        Truck(int b_code, std::string b_name);
-        std::string get_brand_name();
-        int get_brand_code();
-        ~Truck();
+        Truck(); // default constructor - makes new truck with brand code number 0 and empty string "" for brand name
+        Truck(int b_code, std::string b_name); // constructor taking string representing brand name and integer representing code for that brand
+        std::string get_brand_name(); // returns the brand name of the truck
+        int get_brand_code(); // returns the brand code number of truck
+        ~Truck(); // destructor
 };
 
 #endif

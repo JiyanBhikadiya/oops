@@ -14,11 +14,11 @@ int main(){
     Truck t3(1999,"Hundai");
     Truck t4(2006,"Safari");
 
-    if(yard.addStock(t1)){
-        cout<<"Truck 1 added succesfully."<<endl;
+    if(yard.addStock(t1)){ //calling the add.stock method and passing t1 into it if added than it will return true else false
+        cout<<"Truck 1 added succesfully."<<endl; //message for truck added
     }
     else{
-        cout<<"Truck 1 can not be added capacity full."<<endl;
+        cout<<"Truck 1 can not be added capacity full."<<endl; //message for truck not added
     }
     if(yard.addStock(t2)){
         cout<<"Truck 2 added succesfully."<<endl;
@@ -39,13 +39,14 @@ int main(){
         cout<<"Truck 4 can not be added capacity full."<<endl;
     }
 
-    cout<<"Total number of trucks = "<<yard.get_total_stock_count()<<endl;
+    cout<<"Total number of trucks = "<<yard.get_total_stock_count()<<endl; //printing total number of trucks by calling the appropriate method
 
-    cout<<"Truck with code 2005 has count of "<<yard.get_stock_count(1999)<<endl;
+    cout<<"Truck with code 2005 has count of "<<yard.get_stock_count(2005)<<endl; //printing count of the trucks with a same code
 
-    Truck* all_trucks = yard.get_current_stock_list();
+    Truck* all_trucks = yard.get_current_stock_list(); //getting list of all trucks with thier brand name and brand code number using appropriate method
+
     for(int i=0;i<yard.get_total_stock_count();i++){
-        cout<<"Truck "<<i+1<<":- Brand Name:- "<<all_trucks[i].get_brand_name()<<", Brand code Number:- "<<all_trucks[i].get_brand_code()<<endl;
+        cout<<"Truck "<<i+1<<":- Brand Name:- "<<all_trucks[i].get_brand_name()<<", Brand code Number:- "<<all_trucks[i].get_brand_code()<<endl; //printing list of all trucks
     }
     return 0;
 }
