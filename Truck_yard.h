@@ -1,5 +1,5 @@
-#ifndef TRUCK_H
-#define TRUCK_H
+#ifndef TRUCK_YARD_H
+#define TRUCK_YARD_H
 
 #include "Truck.h"
 
@@ -11,15 +11,15 @@ using namespace std;
 class Truck_yard{
     private:
         int maximum_capacity,current_capacity;
-        
+        Truck* all_trucks;
 
     public:
         Truck_yard();
         Truck_yard(int capacity);
         int get_total_stock_count();
         int get_stock_count(int code);
-        // Truck* get_current_stock_list();
-        // bool addStock(Truck c);
+        Truck* get_current_stock_list();
+        bool addStock(Truck c);
         ~Truck_yard();
 };
 
