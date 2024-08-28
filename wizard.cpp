@@ -7,16 +7,16 @@
 using namespace std;
 
 Wizard::Wizard() {
-    Wizard("Hello",0,0,0);
+    Wizard("",0,0,0);
 }
 
 Wizard::Wizard(string name, int health, int damage, int mana) : Player(name,health,damage){
-    // Player(name,health,damage);
     this->mana = mana;
 }
 
 void Wizard::castSpell(Player* opponent) {
-    cout<<"Hello"<<endl;
+    attack(opponent,mana);
+    cout << name << " casts a spell on " << opponent->getName() << " for " << damage << " damage."<<endl;
 }
 
 int Wizard::setMana() { 

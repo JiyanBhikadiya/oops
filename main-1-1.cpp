@@ -11,7 +11,6 @@ Wizard wizard("Gandalf", 100, 20, 50);
 Warrior warrior("Aragorn", 120, 25, "Sword");
 // wizard.setName("Hello1");
 cout << "Let the battle begin!" << endl;
-// cout<<warrior.getName()<<endl;
 while (wizard.getHealth() > 0 && warrior.getHealth() > 0) {
 wizard.castSpell(&warrior);
 if (warrior.getHealth() > 0) {

@@ -7,15 +7,17 @@
 using namespace std;
 
 Warrior::Warrior() {
-    Warrior("Hello",0,0,"");
+    Warrior("",0,0,"");
 }
 
-Warrior::Warrior(string name, int health, int damage, string weapon) {
-    Player(name,health,damage);
+Warrior::Warrior(string name, int health, int damage, string weapon) : Player(name,health,damage){
     this->weapon = weapon;
 }
 
-void Warrior::swingWeapon(Player* opponent) {}
+void Warrior::swingWeapon(Player* opponent) {
+    attack(opponent,damage);
+    cout << name << " swings their " << weapon << " at " << opponent->getName() << "!"<<endl;
+}
 
 string Warrior::getWeapon() { 
     return weapon;
