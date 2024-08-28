@@ -11,8 +11,8 @@ class Warrior : public Player{
     private:
         string weapon;
     public:
-        Warrior(string name, int health, int damage,string weapon);
         Warrior();
+        Warrior(string name, int health, int damage,string weapon);
         void swingWeapon(Player* opponent);
         string getWeapon();
         void setWeapon(string new_weapon);

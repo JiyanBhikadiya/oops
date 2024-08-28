@@ -11,8 +11,8 @@ class Wizard : public Player{
     private:
         int mana;
     public:
-        Wizard(string name, int health, int damage,int mana);
         Wizard();
+        Wizard(string name, int health, int damage,int mana);
         void castSpell(Player* opponent);
         int setMana();
         void setMana(int new_Mana);

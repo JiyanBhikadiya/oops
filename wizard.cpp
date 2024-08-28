@@ -6,13 +6,13 @@
 
 using namespace std;
 
-Wizard::Wizard(string name, int health, int damage, int mana) {
-    Player(name,health,damage);
-    this->mana = mana;
+Wizard::Wizard() {
+    Wizard("Hello",0,0,0);
 }
 
-Wizard::Wizard() {
-    Wizard("",0,0,0);
+Wizard::Wizard(string name, int health, int damage, int mana) : Player(name,health,damage){
+    // Player(name,health,damage);
+    this->mana = mana;
 }
 
 void Wizard::castSpell(Player* opponent) {
