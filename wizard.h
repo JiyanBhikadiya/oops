@@ -1,8 +1,9 @@
-#ifndef WIZARD.H
-#define WIZARD.H
+#ifndef WIZARD_H
+#define WIZARD_H
 
 #include <iostream>
 #include <string>
+#include "player.h"
 
 using namespace std;
 
@@ -13,6 +14,8 @@ class Wizard : public Player{
         Wizard(string name, int health, int damage,int mana);
         Wizard();
         void castSpell(Player* opponent);
+        int setMana();
+        void setMana(int new_Mana);
 };
 
 #endif

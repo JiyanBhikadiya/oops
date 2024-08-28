@@ -15,4 +15,14 @@ Wizard::Wizard() {
     Wizard("",0,0,0);
 }
 
-void Wizard::castSpell(Player* opponent) {}
+void Wizard::castSpell(Player* opponent) {
+    cout<<"Hello"<<endl;
+}
+
+int Wizard::setMana() { 
+    return mana;
+}
+
+void Wizard::setMana(int new_Mana) {
+    this->mana = new_Mana;
+}

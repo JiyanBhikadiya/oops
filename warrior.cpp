@@ -16,3 +16,11 @@ Warrior::Warrior() {
 }
 
 void Warrior::swingWeapon(Player* opponent) {}
+
+string Warrior::getWeapon() { 
+    return weapon;
+ }
+
+void Warrior::setWeapon(string new_weapon) {
+    this->weapon = new_weapon;
+}

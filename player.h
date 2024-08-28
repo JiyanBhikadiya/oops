@@ -1,5 +1,5 @@
-#ifndef PLAYER.H
-#define PLAYER.H
+#ifndef PLAYER_H
+#define PLAYER_H
 
 #include <iostream>
 #include <string>
@@ -16,6 +16,12 @@ class Player{
         Player();
         void attack(Player* opponent,int damage);
         void takeDamage(int damage);
+        string getName();
+        int getHealth();
+        int getDamage();
+        void setName(string new_name);
+        void setHealth(int new_health);
+        void setDamage(int new_damage);
 };
 
 #endif
