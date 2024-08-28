@@ -4,7 +4,7 @@
 #include <iostream>
 #include <string>
 
-class warrior : public Player{
+class Warrior : public Player{
     private:
         string weapon;
     public:

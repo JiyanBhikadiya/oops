@@ -8,9 +8,7 @@ class Wizard : public Player{
     private:
         int mana;
     public:
-        void castSpell(Player* opponent){
-
-        };
+        void castSpell(Player* opponent){};
 };
 
 #endif

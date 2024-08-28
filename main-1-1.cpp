@@ -1,10 +1,9 @@
 
 #include <iostream>
-#include "Player.h"
-#include "Wizard.h"
-#include "Warrior.h"
+#include "player.h"
+#include "wizard.h"
+#include "warrior.h"
 using namespace std;
-
 int main() {
 //Wizard(name, health, damage, mana)
 Wizard wizard("Gandalf", 100, 20, 50);
