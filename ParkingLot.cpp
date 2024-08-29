@@ -26,7 +26,7 @@ void ParkingLot::parkVehicle(Vehicle* vehicleWaiting) {
         // cout<<"Vehicle "<<vehicleWaiting->getID()<<" Parked"<<endl;
     }
     else{
-        cout<<"The lot is full."<<endl;
+        cout<<"The lot is full"<<endl;
     }
 }
 
@@ -44,6 +44,6 @@ void ParkingLot::unparkVehicle(int ID) {
     }
 
     if(isVehiclePresent == 0){
-        cout<<"Vehicel not in the lot."<<endl;
+        cout<<"Vehicel not in the lot"<<endl;
     }
 }

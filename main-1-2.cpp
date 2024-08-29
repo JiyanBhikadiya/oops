@@ -37,5 +37,6 @@ int main(){
     parking.unparkVehicle(1);
     vehicle = new Motorbike(count);
     parking.parkVehicle(vehicle);
+    parking.unparkVehicle(11);
     return 0;
 }
