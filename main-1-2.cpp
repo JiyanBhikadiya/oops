@@ -11,34 +11,34 @@ int main(){
 
     parking.unparkVehicle(0);
 
-    // while(true){
-    //     cout<<"Enter the type of vehicle they want to park:- "<<endl;
-    //     cin>>typeOfVehicelParked;
+    while(true){
+        cout<<"Enter the type of vehicle they want to park:- "<<endl;
+        cin>>typeOfVehicelParked;
 
-    //     if(typeOfVehicelParked == "car"){
-    //         count++;
-    //         vehicle = new Car(count);
-    //         parking.parkVehicle(vehicle);
-    //     }
-    //     if(typeOfVehicelParked == "bus"){
-    //         count++;
-    //         vehicle = new Bus(count);
-    //         parking.parkVehicle(vehicle);
-    //     }
-    //     if(typeOfVehicelParked == "motorbike"){
-    //         count++;
-    //         vehicle = new Motorbike(count);
-    //         parking.parkVehicle(vehicle);
-    //     }
+        if(typeOfVehicelParked == "car"){
+            count++;
+            vehicle = new Car(count);
+            parking.parkVehicle(vehicle);
+        }
+        if(typeOfVehicelParked == "bus"){
+            count++;
+            vehicle = new Bus(count);
+            parking.parkVehicle(vehicle);
+        }
+        if(typeOfVehicelParked == "motorbike"){
+            count++;
+            vehicle = new Motorbike(count);
+            parking.parkVehicle(vehicle);
+        }
 
-    //     if(count == 4){
-    //         break;
-    //     }
-    // }
+        if(count == 4){
+            break;
+        }
+    }
 
-    // parking.unparkVehicle(1);
-    // vehicle = new Motorbike(count);
-    // parking.parkVehicle(vehicle);
-    // parking.unparkVehicle(111);
+    parking.unparkVehicle(1);
+    vehicle = new Motorbike(count);
+    parking.parkVehicle(vehicle);
+    parking.unparkVehicle(111);
     return 0;
 }

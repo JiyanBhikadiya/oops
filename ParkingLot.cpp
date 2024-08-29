@@ -1,14 +1,12 @@
 #include "ParkingLot.h"
 
 ParkingLot::ParkingLot() {
-    maxCapacity = 0;
     currentCapacity = 0;
     maxNumOfVehicles = 0;
     vehicles = new Vehicle[maxNumOfVehicles];
 }
 
 ParkingLot::ParkingLot(int maxNumOfVehicles) {
-    maxCapacity = 0;
     currentCapacity = 0;
     this->maxNumOfVehicles = maxNumOfVehicles;
     vehicles = new Vehicle[maxNumOfVehicles];
