@@ -34,6 +34,6 @@ int main(){
         }
     }
 
-    cout<<"Number of vehicles overstayed = "<<parking.countOverStayingVehicles(15)<<endl;
+    cout<<"Number of vehicles overstayed = "<<parking.countOverstayingVehicles(15)<<endl;
     return 0;
 }

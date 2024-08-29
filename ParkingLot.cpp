@@ -46,7 +46,7 @@ void ParkingLot::unparkVehicle(int ID) {
     }
 }
 
-int ParkingLot::countOverStayingVehicles(int maxParkingDuration) {
+int ParkingLot::countOverstayingVehicles(int maxParkingDuration) {
     int count = 0;
     time_t t = time(nullptr);
 

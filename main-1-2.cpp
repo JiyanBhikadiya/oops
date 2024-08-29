@@ -37,7 +37,5 @@ int main(){
     }
 
     parking.unparkVehicle(111);
-
-    cout<<"Number of vehicles overstayed = "<<parking.countOverStayingVehicles(15)<<endl;
     return 0;
 }
