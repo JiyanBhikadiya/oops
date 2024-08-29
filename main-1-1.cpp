@@ -1,7 +1,7 @@
 #include "Vehicle.h"
 #include "Car.h"
 #include "Bus.h"
-#include "Mototbike.h"
+#include "Motorbike.h"
 
 #include <iostream>
 #include <string>
@@ -31,6 +31,16 @@ int main(){
             Car car(time(0) + 3600,ID);
             car.setTimeOfEntry(car.getParkingDuration());
             vehicle[i] = car;
+        }
+        if(vechicleType == "bus"){
+            Bus bus(time(0) + 3600,ID);
+            bus.setTimeOfEntry(bus.getParkingDuration());
+            vehicle[i] = bus;
+        }
+        if(vechicleType == "motorbike"){
+            Motorbike motorbike(time(0) + 3600,ID);
+            motorbike.setTimeOfEntry(motorbike.getParkingDuration());
+            vehicle[i] = motorbike;
         }
     }
 

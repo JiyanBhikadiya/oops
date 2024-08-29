@@ -1,14 +1,14 @@
-#ifndef BUS_H
-#define BUS_H
+#ifndef MOTORBIKE_H
+#define MOTORBIKE_H
 
 #include "Vehicle.h"
 
-class Bus : public Vehicle{
+class Motorbike : public Vehicle{
     private:
         int parkingDuration;
     public:
-        Bus();
-        Bus(time_t timeOfEntry,int ID);
+        Motorbike();
+        Motorbike(time_t timeOfEntry,int ID);
         
         int getParkingDuration();
         void setParkingDuration(int new_parkingDuration);
