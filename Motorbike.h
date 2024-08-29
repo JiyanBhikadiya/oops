@@ -8,7 +8,7 @@ class Motorbike : public Vehicle{
         int parkingDuration;
     public:
         Motorbike();
-        Motorbike(time_t timeOfEntry,int ID);
+        Motorbike(int ID);
         
         int getParkingDuration();
         void setParkingDuration(int new_parkingDuration);

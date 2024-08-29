@@ -6,7 +6,7 @@ Motorbike::Motorbike() {
     this->parkingDuration = 0;
 }
 
-Motorbike::Motorbike(time_t timeOfEntry, int ID) : Vehicle(timeOfEntry,ID) {
+Motorbike::Motorbike(int ID) : Vehicle(ID) {
     this->parkingDuration = 0;
 }
 

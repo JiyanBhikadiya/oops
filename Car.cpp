@@ -6,7 +6,7 @@ Car::Car() {
     this->parkingDuration = 0;
 }
 
-Car::Car(time_t timeOfEntry, int ID) : Vehicle(timeOfEntry,ID) {
+Car::Car(int ID) : Vehicle(ID) {
     this->parkingDuration = 0;
 }
 

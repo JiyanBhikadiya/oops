@@ -11,7 +11,7 @@ class Vehicle{
         int ID;
     public:
         Vehicle();
-        Vehicle(time_t timeOfEntry,int ID);
+        Vehicle(int ID);
         
         int getID();
         time_t getTimeofEntry();

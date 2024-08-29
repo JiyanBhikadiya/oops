@@ -8,7 +8,7 @@ class Bus : public Vehicle{
         int parkingDuration;
     public:
         Bus();
-        Bus(time_t timeOfEntry,int ID);
+        Bus(int ID);
         
         int getParkingDuration();
         void setParkingDuration(int new_parkingDuration);

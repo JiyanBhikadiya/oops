@@ -1,12 +1,11 @@
 #include "Vehicle.h"
 
 Vehicle::Vehicle() {
-    this->timeOfEntry = timeOfEntry;
-    this->ID = ID;
+    this->timeOfEntry = time(0);
+    this->ID = 0;
 }
 
-Vehicle::Vehicle(time_t timeOfEntry, int ID) {
-    this->timeOfEntry = timeOfEntry;
+Vehicle::Vehicle(int ID) {
     this->ID = ID;
 }
 

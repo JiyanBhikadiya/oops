@@ -6,7 +6,7 @@ Bus::Bus() {
     this->parkingDuration = 0;
 }
 
-Bus::Bus(time_t timeOfEntry, int ID) : Vehicle(timeOfEntry,ID) {
+Bus::Bus(int ID) : Vehicle(ID) {
     this->parkingDuration = 0;
 }
 
