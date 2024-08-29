@@ -11,7 +11,7 @@ Bus::Bus(int ID) : Vehicle(ID) {
 }
 
 int Bus::getParkingDuration() {
-    parkingDuration = getTimeofEntry() - time(nullptr);
+    parkingDuration = getTimeofEntry() - time(nullptr) + 3600;
     return (int)parkingDuration * 0.75;
 }
 

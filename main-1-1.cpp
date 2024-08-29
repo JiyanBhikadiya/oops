@@ -28,17 +28,17 @@ int main(){
         cin>>vechicleType;
 
         if(vechicleType == "car"){
-            Car car(time(0) + 3600,ID);
+            Car car(ID);
             car.setTimeOfEntry(car.getParkingDuration());
             vehicle[i] = car;
         }
         if(vechicleType == "bus"){
-            Bus bus(time(0) + 3600,ID);
+            Bus bus(ID);
             bus.setTimeOfEntry(bus.getParkingDuration());
             vehicle[i] = bus;
         }
         if(vechicleType == "motorbike"){
-            Motorbike motorbike(time(0) + 3600,ID);
+            Motorbike motorbike(ID);
             motorbike.setTimeOfEntry(motorbike.getParkingDuration());
             vehicle[i] = motorbike;
         }

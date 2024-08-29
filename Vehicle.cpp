@@ -6,6 +6,7 @@ Vehicle::Vehicle() {
 }
 
 Vehicle::Vehicle(int ID) {
+    this->timeOfEntry = time(0);
     this->ID = ID;
 }
 
