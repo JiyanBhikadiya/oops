@@ -4,7 +4,7 @@
 #include "Motorbike.h"
 
 int main(){
-    ParkingLot parking(3);
+    ParkingLot parking(10);
     string typeOfVehicelParked = "";
     Vehicle* vehicle;
     int count = 0;
@@ -31,14 +31,13 @@ int main(){
             parking.parkVehicle(vehicle);
         }
 
-        if(count == 4){
+        if(count == 11){
             break;
         }
     }
 
-    parking.unparkVehicle(1);
-    vehicle = new Motorbike(count);
-    parking.parkVehicle(vehicle);
     parking.unparkVehicle(111);
+
+    cout<<"Number of vehicles overstayed = "<<parking.countOverStayingVehicles(15)<<endl;
     return 0;
 }

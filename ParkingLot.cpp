@@ -1,4 +1,5 @@
 #include "ParkingLot.h"
+#include <time.h>
 
 ParkingLot::ParkingLot() {
     currentCapacity = 0;
@@ -43,4 +44,17 @@ void ParkingLot::unparkVehicle(int ID) {
     else{
         currentCapacity--;
     }
+}
+
+int ParkingLot::countOverStayingVehicles(int maxParkingDuration) {
+    int count = 0;
+    time_t t = time(nullptr);
+
+    for(int i=0;i<currentCapacity;i++){
+        if((vehicles[i].getTimeofEntry() - t) < maxParkingDuration){
+            count++;
+        }
+    }
+
+    return count;
 }
