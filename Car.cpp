@@ -11,7 +11,7 @@ Car::Car(int ID) : Vehicle(ID) {
 }
 
 int Car::getParkingDuration() {
-    parkingDuration = getTimeofEntry() - time(nullptr) + 3600;
+    parkingDuration = getTimeofEntry() - time(nullptr);
     return (int)parkingDuration * 0.9;
 }
 
