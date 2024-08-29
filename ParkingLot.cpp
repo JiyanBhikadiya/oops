@@ -35,15 +35,18 @@ void ParkingLot::unparkVehicle(int ID) {
     for(int i=0;i<currentCapacity;i++){
         if(ID == vehicles[i].getID()){
             // cout<<"Vehicle "<<ID<<" Unparked"<<endl;
-            isVehiclePresent = 1;
+            isVehiclePresent++;
             currentCapacity--;
             for(int j = i;j<currentCapacity;j++){
                 vehicles[i] = vehicles[j];
             }
         }
+        else{
+            isVehiclePresent = 2;
+        }
     }
 
-    if(isVehiclePresent == 0){
+    if(isVehiclePresent > 0){
         cout<<"Vehicel not in the lot"<<endl;
     }
 }

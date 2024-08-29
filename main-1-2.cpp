@@ -4,10 +4,12 @@
 #include "Motorbike.h"
 
 int main(){
-    ParkingLot parking(10);
+    ParkingLot parking(3);
     string typeOfVehicelParked = "";
     Vehicle* vehicle;
     int count = 0;
+
+    parking.unparkVehicle(1);
 
     while(true){
         cout<<"Enter the type of vehicle they want to park:- "<<endl;
@@ -29,7 +31,7 @@ int main(){
             parking.parkVehicle(vehicle);
         }
 
-        if(count == 11){
+        if(count == 4){
             break;
         }
     }
