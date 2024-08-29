@@ -28,23 +28,28 @@ void ParkingLot::parkVehicle(Vehicle* vehicleWaiting) {
     }
 }
 
-void ParkingLot::unparkVehicle(int ID) {
-    bool isVehiclePresent = false;
-    for(int i=0;i<currentCapacity;i++){
-        if(ID == vehicles[i].getID()){
-            // cout<<"Vehicle "<<ID<<" Unparked"<<endl;
-            isVehiclePresent = true;
-            currentCapacity--;
-            for(int j = i;j<currentCapacity-1;j++){
-                vehicles[j] = vehicles[j+1];
-            }
-        }
-    }
+// void ParkingLot::unparkVehicle(int ID) {
+//     bool isVehiclePresent = false;
+//     for(int i=0;i<currentCapacity;i++){
+//         if(ID == vehicles[i].getID()){
+//             // cout<<"Vehicle "<<ID<<" Unparked"<<endl;
+//             isVehiclePresent = true;
+//             currentCapacity--;
+//             for(int j = i;j<currentCapacity-1;j++){
+//                 vehicles[j] = vehicles[j+1];
+//             }
+//         }
+//     }
 
-    if(!isVehiclePresent){
-        cout<<"Vehicle not in the lot"<<endl;
-    }
-}
+//     if(!isVehiclePresent){
+//         cout<<"Vehicle not in the lot"<<endl;
+//     }
+// }
+
+
+
+
+
 // #include "ParkingLot.h"
 // #include <iostream>
 
@@ -64,21 +69,20 @@ void ParkingLot::unparkVehicle(int ID) {
 //     }
 // }
 
-// void ParkingLot::unparkVehicle(int id) {
-//     bool found = false;
-//     for (int i = 0; i < currentCapacity; ++i) {
-//         if (vehicles[i]->getID() == id) {
-//             delete vehicles[i];
-//             for (int j = i; j < currentCapacity - 1; ++j) {
-//                 vehicles[j] = vehicles[j + 1];
-//             }
-//             found = true;
-//             break;
-//         }
-//     }
-//     if (!found) {
-//         std::cout << "Vehicle not in the lot" << std::endl;
-//     } else {
-//         currentCapacity--;
-//     }
-// }
+void ParkingLot::unparkVehicle(int id) {
+    bool found = false;
+    for (int i = 0; i < currentCapacity; ++i) {
+        if (vehicles[i].getID() == id) {
+            for (int j = i; j < currentCapacity - 1; ++j) {
+                vehicles[j] = vehicles[j + 1];
+            }
+            found = true;
+            break;
+        }
+    }
+    if (!found) {
+        std::cout << "Vehicle not in the lot" << std::endl;
+    } else {
+        currentCapacity--;
+    }
+}
