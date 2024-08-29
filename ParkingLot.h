@@ -7,7 +7,7 @@ class ParkingLot{
     private:
         int currentCapacity;
         int maxNumOfVehicles;
-        Vehicle* vehicles;      
+        Vehicle** vehicles;      
     public:
         ParkingLot();
         ParkingLot(int maxNumOfVehicles);

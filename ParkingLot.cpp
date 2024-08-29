@@ -3,13 +3,13 @@
 ParkingLot::ParkingLot() {
     currentCapacity = 0;
     maxNumOfVehicles = 0;
-    vehicles = new Vehicle[maxNumOfVehicles];
+    vehicles = new Vehicle*[maxNumOfVehicles];
 }
 
 ParkingLot::ParkingLot(int maxNumOfVehicles) {
     currentCapacity = 0;
     this->maxNumOfVehicles = maxNumOfVehicles;
-    vehicles = new Vehicle[maxNumOfVehicles];
+    vehicles = new Vehicle*[maxNumOfVehicles];
 }
 
 int ParkingLot::getCount() {
@@ -18,7 +18,7 @@ int ParkingLot::getCount() {
 
 void ParkingLot::parkVehicle(Vehicle* vehicleWaiting) {
     if(currentCapacity < maxNumOfVehicles){
-        vehicles[currentCapacity] = vehicleWaiting->getID();
+        vehicles[currentCapacity] = vehicleWaiting;
         currentCapacity++;
 
         // cout<<"Vehicle "<<vehicleWaiting->getID()<<" Parked"<<endl;
@@ -31,12 +31,12 @@ void ParkingLot::parkVehicle(Vehicle* vehicleWaiting) {
 void ParkingLot::unparkVehicle(int ID) {
     bool isVehiclePresent = false;
     for(int i=0;i<currentCapacity;i++){
-        if(ID == vehicles[i].getID()){
+        if(ID == vehicles[i]->getID()){
             // cout<<"Vehicle "<<ID<<" Unparked"<<endl;
             isVehiclePresent = true;
             currentCapacity--;
             for(int j = i;j<currentCapacity-1;j++){
-                vehicles[i] = vehicles[j];
+                vehicles[j] = vehicles[j+1];
             }
         }
     }
