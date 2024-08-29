@@ -1,0 +1,23 @@
+#ifndef PARKINGLOT_H
+#define PARKINGLOT_H
+
+#include "Vehicle.h"
+
+class ParkingLot{
+    private:
+        int maxCapacity;
+        int currentCapacity;
+    protected:
+        int maxNumOfVehicles;
+        Vehicle* vehicles;
+    public:
+        ParkingLot();
+        ParkingLot(int maxNumOfVehicles);
+        
+        int getCount();
+        
+        void parkVehicle(Vehicle* vehicleWaiting);
+        void unparkVehicle(int ID);
+};
+
+#endif
