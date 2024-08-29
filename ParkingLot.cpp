@@ -23,7 +23,7 @@ void ParkingLot::parkVehicle(Vehicle* vehicleWaiting) {
         vehicles[currentCapacity] = vehicleWaiting->getID();
         currentCapacity++;
 
-        cout<<"Vehicle "<<vehicleWaiting->getID()<<" Parked"<<endl;
+        // cout<<"Vehicle "<<vehicleWaiting->getID()<<" Parked"<<endl;
     }
     else{
         cout<<"The lot is full."<<endl;
@@ -34,7 +34,7 @@ void ParkingLot::unparkVehicle(int ID) {
     int isVehiclePresent = 0;
     for(int i=0;i<currentCapacity;i++){
         if(ID == vehicles[i].getID()){
-            cout<<"Vehicle "<<ID<<" Unparked"<<endl;
+            // cout<<"Vehicle "<<ID<<" Unparked"<<endl;
             isVehiclePresent = 1;
             currentCapacity--;
             for(int j = i;j<currentCapacity;j++){
