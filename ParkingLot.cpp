@@ -47,6 +47,6 @@ void ParkingLot::unparkVehicle(int ID) {
     }
 
     if(isVehiclePresent > 0){
-        cout<<"Vehicel not in the lot"<<endl;
+        cout<<"Vehicle not in the lot"<<endl;
     }
 }
