@@ -51,7 +51,7 @@ int ParkingLot::countOverstayingVehicles(int maxParkingDuration) {
     time_t t = time(nullptr);
 
     for(int i=0;i<currentCapacity;i++){
-        if((vehicles[i].getTimeofEntry() - t) < maxParkingDuration){
+        if((t - vehicles[i].getTimeofEntry()) > maxParkingDuration){
             count++;
         }
     }

@@ -9,29 +9,17 @@ int main(){
     Vehicle* vehicle;
     int count = 0;
 
-    while(true){
-        cout<<"Enter the type of vehicle they want to park:- "<<endl;
-        cin>>typeOfVehicelParked;
-
-        if(typeOfVehicelParked == "car"){
-            count++;
-            vehicle = new Car(count);
-            parking.parkVehicle(vehicle);
-        }
-        if(typeOfVehicelParked == "bus"){
-            count++;
-            vehicle = new Bus(count);
-            parking.parkVehicle(vehicle);
-        }
-        if(typeOfVehicelParked == "motorbike"){
-            count++;
-            vehicle = new Motorbike(count);
-            parking.parkVehicle(vehicle);
-        }
-
-        if(count == 11){
-            break;
-        }
+    for(int i=0;i<5;i++){
+        vehicle = new Car(i);
+        parking.parkVehicle(vehicle);
+    }
+    for(int i=6;i<9;i++){
+        vehicle = new Bus(i);
+        parking.parkVehicle(vehicle);
+    }
+    for(int i=9;i<11;i++){
+        vehicle = new Motorbike(i);
+        parking.parkVehicle(vehicle);
     }
 
     cout<<"Number of vehicles overstayed = "<<parking.countOverstayingVehicles(15)<<endl;
