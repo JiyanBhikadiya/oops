@@ -10,15 +10,15 @@ int main(){
     int count = 0;
 
     for(int i=0;i<5;i++){
-        vehicle = new Car(i);
+        vehicle = new Car(i+1);
         parking.parkVehicle(vehicle);
     }
     for(int i=6;i<9;i++){
-        vehicle = new Bus(i);
+        vehicle = new Bus(i+1);
         parking.parkVehicle(vehicle);
     }
     for(int i=9;i<11;i++){
-        vehicle = new Motorbike(i);
+        vehicle = new Motorbike(i+1);
         parking.parkVehicle(vehicle);
     }
 

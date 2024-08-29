@@ -26,6 +26,10 @@ void Vehicle::setTimeOfEntry(time_t new_timeOfEntry) {
     timeOfEntry = new_timeOfEntry;
 }
 
+int Vehicle::getParkingDuration() {
+    return (int)(time(nullptr) - getTimeofEntry());
+}
+
 Vehicle::~Vehicle() {
 
 }
