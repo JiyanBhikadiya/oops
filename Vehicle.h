@@ -19,6 +19,8 @@ class Vehicle{
         void setID(int new_ID);
         void setTimeOfEntry(time_t new_timeOfEntry);
 
+        virtual int getParkingDuration();
+
         ~Vehicle();
 };
 
