@@ -1,26 +1,26 @@
-#include "Home.h"
+#include "House.h"
 
-Home::Home() {
+House::House() {
     this->numAppliance = 0;
     this->currentAppliance = 0;
     this->appliances = new Appliance*[numAppliance];
 }
 
-Home::Home(int numAppliance) {
+House::House(int numAppliance) {
     this->numAppliance = numAppliance;
     this->currentAppliance = 0;
     this->appliances = new Appliance*[numAppliance];
 }
 
-void Home::setNumAppliance(int numAppliance) {
+void House::setNumAppliance(int numAppliance) {
     this->numAppliance = numAppliance;
 }
 
-int Home::getNumAppliance() {
+int House::getNumAppliance() {
     return this->numAppliance;
 }
 
-bool Home::addAppliance(Appliance* appliance) {
+bool House::addAppliance(Appliance* appliance) {
     if(currentAppliance < numAppliance){
         appliances[currentAppliance] = appliance;
         currentAppliance++;
@@ -31,7 +31,7 @@ bool Home::addAppliance(Appliance* appliance) {
     }
 }
 
-double Home::getTotalPowerConsumption() {
+double House::getTotalPowerConsumption() {
     double totalPowerConsumption = 0;
     for(int i=0;i<currentAppliance;i++){
         totalPowerConsumption += appliances[i]->getPowerConsumption();

@@ -1,17 +1,17 @@
-#ifndef HOME_H
-#define HOME_H
+#ifndef HOUSE_H
+#define HOUSE_H
 
 #include "Appliance.h"
 
-class Home : public Appliance{
+class House : public Appliance{
     private:
         Appliance** appliances;
         int numAppliance;
         int currentAppliance;
 
     public:
-        Home();
-        Home(int numAppliance);
+        House();
+        House(int numAppliance);
 
         void setNumAppliance(int numAppliance);
         int getNumAppliance();

@@ -1,11 +1,11 @@
-#include "Home.h"
+#include "House.h"
 #include "Fridge.h"
 #include "TV.h"
 #include "Appliance.h"
 
 int main(){
 
-    Home home(2);
+    House house(2);
 
     Fridge* fridge1 = new Fridge;
     Fridge* fridge2 = new Fridge;
@@ -23,31 +23,31 @@ int main(){
     tv2->setScreenSize(65);
 
 
-    if(home.addAppliance(fridge1)){
+    if(house.addAppliance(fridge1)){
         cout<<"Appliance added"<<endl;
     }
     else{
         cout<<"No space left"<<endl;
     }
-    if(home.addAppliance(tv1)){
+    if(house.addAppliance(tv1)){
         cout<<"Appliance added"<<endl;
     }
     else{
         cout<<"No space left"<<endl;
     }
-    if(home.addAppliance(fridge2)){
+    if(house.addAppliance(fridge2)){
         cout<<"Appliance added"<<endl;
     }
     else{
         cout<<"No space left"<<endl;
     }
-    if(home.addAppliance(tv2)){
+    if(house.addAppliance(tv2)){
         cout<<"Appliance added"<<endl;
     }
     else{
         cout<<"No space left"<<endl;
     }
 
-    cout<<"Total power consumption = "<<home.getTotalPowerConsumption()<<endl;
+    cout<<"Total power consumption = "<<house.getTotalPowerConsumption()<<endl;
     return 0;
 }
