@@ -1,4 +1,4 @@
-#include "Appliance.cpp"
+#include "Appliance.h"
 
 using namespace std;
 
