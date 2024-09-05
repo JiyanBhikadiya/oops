@@ -1,10 +1,19 @@
-#ifndef AIRVEHICLE_H
-#define AIRVEHICLE_H
+#ifndef AIRPLANE_H
+#define AIRPLANE_H
 
-class Airplane{
+#include "AirVehicle.h"
+
+class Airplane : public AirVehicle{
     private:
+        int numPassengers;
 
     public:
+        Airplane();                       
+        Airplane(int w, int p);
+
+        void reducePassengers(int x);     // reduce passenger list by x
+        int get_numPassengers();
+        void fly(int headwind, int minutes); 
 };
 
 #endif
