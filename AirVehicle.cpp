@@ -8,6 +8,7 @@ AirVehicle::AirVehicle() {
 
 AirVehicle::AirVehicle(int w) {
     this->weight = w;
+    this->fuel = 100;
     this->numberOfFlights = 0;
 }
 
