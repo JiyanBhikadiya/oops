@@ -36,10 +36,10 @@ void Helicopter::fly(int headwind, int minutes) {
         }
     }
 
-    this->fuel -= fuelUsed;
+    this->fuel = fuelUsed;
 
     if(this->fuel < 20){
-        this->fuel += fuelUsed;
+        // this->fuel += fuelUsed;
     }
     else{
         this->numberOfFlights++;
