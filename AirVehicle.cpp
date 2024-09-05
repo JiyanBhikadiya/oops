@@ -12,27 +12,27 @@ AirVehicle::AirVehicle(int w) {
     this->numberOfFlights = 0;
 }
 
-int AirVehicle::getWeight() {
+int AirVehicle::get_weight() {
     return this->weight;
 }
 
-void AirVehicle::setWeight(int weight) {
+void AirVehicle::set_weight(int weight) {
     this->weight = weight;
 }
 
-float AirVehicle::getFuel() {
+float AirVehicle::get_fuel() {
     return this->fuel;
 }
 
-void AirVehicle::setFuel(float fuel) {
+void AirVehicle::set_fuel(float fuel) {
     this->fuel = fuel;
 }
 
-int AirVehicle::getNumberOfFlights() {
+int AirVehicle::get_numberOfFlights() {
     return this->numberOfFlights;
 }
 
-void AirVehicle::setNumberOfFlights(int numberOfFlights) {
+void AirVehicle::set_numberOfFlights(int numberOfFlights) {
     this->numberOfFlights = numberOfFlights;
 }
 

@@ -2,7 +2,7 @@
 #define AIRVEHICLE_H
 
 class AirVehicle{
-    private:
+    protected:
         int weight;        // the weight of AirVehicle 
         float fuel;        // fuel percentage, initially 100%
         int numberOfFlights; // initially 0
@@ -12,14 +12,14 @@ class AirVehicle{
         AirVehicle();
         AirVehicle(int w);  // creates an AirVehicle with weight w
 
-        int getWeight();
-        void setWeight(int weight);
+        int get_weight();
+        void set_weight(int weight);
 
-        float getFuel();
-        void setFuel(float fuel);
+        float get_fuel();
+        void set_fuel(float fuel);
 
-        int getNumberOfFlights();
-        void setNumberOfFlights(int numberOfFlights);
+        int get_numberOfFlights();
+        void set_numberOfFlights(int numberOfFlights);
 
         void refuel();      // Resets fuel back to 100%
         virtual void fly(int headwind, int minutes); // headwind in km/h and minutes (time flying)
