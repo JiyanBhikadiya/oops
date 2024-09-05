@@ -14,8 +14,8 @@ class Helicopter : public AirVehicle{
         Helicopter();
         Helicopter(int w,string n);
 
-        string getName();
-        void setName(string name);
+        string get_name();
+        void set_name(string name);
 
         void fly(int headwind, int minutes);
 };
