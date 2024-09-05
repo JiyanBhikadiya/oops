@@ -4,7 +4,10 @@
 #include "AirVehicle.h"
 
 class Airfleet : public AirVehicle{
+    private:
 
+    public:
+    
 };
 
 #endif
