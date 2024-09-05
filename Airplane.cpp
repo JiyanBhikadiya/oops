@@ -21,19 +21,19 @@ int Airplane::get_numPassengers() {
 }
 
 void Airplane::fly(int headwind, int minutes) {
-    float consumption;
+    float consumption = 0.25;
     float fuelUsed = this->fuel;
 
     if (headwind < 60)
     {
-        consumption = 0.25;
+        consumption += (numPassengers)*0.001;
+        fuelUsed=fuelUsed-(consumption*minutes);            
     }
     else{
         consumption = 0.5;
+        consumption+=(numPassengers)*0.001;
+        fuelUsed=fuelUsed-(consumption*minutes);
     }
-
-    consumption += (numPassengers)*0.001;
-    fuelUsed=fuelUsed-(consumption*minutes);
 
     if (fuelUsed>20)
     {

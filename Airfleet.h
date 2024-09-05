@@ -3,6 +3,8 @@
 
 #include "AirVehicle.h"
 
-class Ai
+class Airfleet : public AirVehicle{
+
+};
 
 #endif
