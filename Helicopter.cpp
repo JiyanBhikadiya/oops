@@ -27,8 +27,7 @@ void Helicopter::fly(int headwind, int minutes) {
         if (weight > 5670) 
         {
             consumption+=(weight-5670)*0.01;
-        }
-        fuelUsed=fuelUsed-(consumption*minutes);    
+        }        
     }
     else{
         consumption = 0.4;
@@ -36,8 +35,10 @@ void Helicopter::fly(int headwind, int minutes) {
         {
             consumption+=(weight-5670)*0.01;
         }
-        fuelUsed=fuelUsed-(consumption*minutes);
     }
+
+    
+    fuelUsed=fuelUsed-(consumption*minutes);
 
     if (fuelUsed>20)
     {
