@@ -1,6 +1,4 @@
 #include"AirFleet.h"
-#include"Airplane.h"
-#include"Helicopter.h"
 
 AirFleet::AirFleet(){
     fleet[0] = new Airplane(20, 10);
