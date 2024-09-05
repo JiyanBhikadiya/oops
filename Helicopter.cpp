@@ -19,29 +19,33 @@ void Helicopter::set_name(string name) {
 }
 
 void Helicopter::fly(int headwind, int minutes) {
-    double fuelUsed;
+    float consumption = 0.18;
+    float fuelc=fuel;
 
-    if(headwind > 45){
-        fuelUsed = 0.4*minutes;
-
-        if(this->weight > 5670){
-            fuelUsed += (this->weight - 5670) * 0.01;
+    if (headwind < 40)
+    {
+        if (weight > 5670) 
+        {
+            consumption+=(weight-5670)*0.01;
         }
+        fuelc=fuelc-(consumption*minutes);
+        if (fuelc>20)
+        {
+            numberOfFlights++;
+            fuel=fuelc;
+        }            
     }
     else{
-        fuelUsed = 0.18*minutes;
-        
-        if(this->weight > 5670){
-            fuelUsed += (this->weight - 5670) * 0.01;
+        consumption = 0.4;
+        if (weight > 5670) 
+        {
+            consumption+=(weight-5670)*0.01;
         }
-    }
-
-    this->fuel = fuelUsed;
-
-    if(this->fuel < 20){
-        // this->fuel += fuelUsed;
-    }
-    else{
-        this->numberOfFlights++;
+        fuelc=fuelc-(consumption*minutes);
+        if (fuelc>20)
+        {
+            numberOfFlights++;
+            fuel=fuelc;
+        }
     }
 }

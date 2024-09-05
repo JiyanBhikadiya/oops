@@ -2,7 +2,9 @@
 #define AIRVEHICLE_H
 
 class Airplane{
+    private:
 
+    public:
 };
 
 #endif
