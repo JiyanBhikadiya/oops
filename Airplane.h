@@ -2,6 +2,9 @@
 #define AIRPLANE_H
 
 #include "AirVehicle.h"
+#include <iostream>
+#include <string>
+using namespace std;
 
 class Airplane : public AirVehicle{
     private:

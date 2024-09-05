@@ -22,18 +22,23 @@ void Helicopter::fly(int headwind, int minutes) {
     float consumption = 0.18;
     float fuelUsed = this->fuel;
 
-    if (headwind > 40){
-        consumption = 0.4;
-    }
-
-    
-    if (weight > 5670) 
+    if (headwind < 40)
     {
-        consumption+=(weight-5670)*0.01;
+        if (weight > 5670) 
+        {
+            consumption+=(weight-5670)*0.01;
+        }
+        fuelUsed=fuelUsed-(consumption*minutes);    
+    }
+    else{
+        consumption = 0.4;
+        if (weight > 5670) 
+        {
+            consumption+=(weight-5670)*0.01;
+        }
+        fuelUsed=fuelUsed-(consumption*minutes);
     }
 
-    fuelUsed=fuelUsed-(consumption*minutes);
-    
     if (fuelUsed>20)
     {
         this->numberOfFlights++;

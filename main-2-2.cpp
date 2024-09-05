@@ -1,13 +1,14 @@
 #include "Airplane.cpp"
 
+
 int main(){
-    Helicopter heli1;
-    cout<<"Helicopter1:- Name = "<<heli1.get_name()<<"Weight = "<<heli1.get_weight()<<"Fuel= "<<heli1.get_fuel()<<endl;
+    Airplane plane1;
+    cout<<"Helicopter1:- Name = "<<plane1.get_name()<<"Weight = "<<plane1.get_weight()<<"Fuel= "<<plane1.get_fuel()<<endl;
 
-    Helicopter heli2(5670,"Heli");
-    cout<<"Helicopter1:- Name = "<<heli2.get_name()<<"Weight = "<<heli2.get_weight()<<"Fuel= "<<heli2.get_fuel()<<endl;
+    Airplane plane2(5670,"plane");
+    cout<<"Helicopter1:- Name = "<<plane2.get_name()<<"Weight = "<<plane2.get_weight()<<"Fuel= "<<plane2.get_fuel()<<endl;
 
-    Helicopter heli3;
+    Airplane plane3;
     heli3.set_weight(5690);
     heli3.set_fuel(80);
     heli3.fly(45,10);
