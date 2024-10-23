@@ -33,7 +33,7 @@ public:
 
             // Check if the new position is within bounds
             if (newPos.first >= 0 && newPos.first < width && newPos.second >= 0 && newPos.second < height) {
-                position = newPos;
+                setCoordinates(newPos.first,newPos.second);
                 return true;
             }
         }
