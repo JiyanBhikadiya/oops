@@ -28,16 +28,14 @@ public:
         }
     }; 
     bool move(int xOffset, int yOffset){
-         if ((xOffset != 0 && yOffset == 0) || (xOffset == 0 && yOffset != 0)) {
-            pair<int,int> newPos = make_pair(position.first + xOffset,position.second + yOffset);
-
-            // Check if the new position is within bounds
-            if (newPos.first >= 0 && newPos.first < width && newPos.second >= 0 && newPos.second < height) {
-                setCoordinates(newPos.first,newPos.second);
-                return true;
-            }
+         if(xOffset <= 2 && yOffset <= 2){
+            this->position.first += xOffset;
+            this->position.second += yOffset;
+            return true;
         }
-        return false;
+        else{
+            return false;
+        }
     
     };
     ~Robot(){
