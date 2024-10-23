@@ -9,17 +9,18 @@ enum InteractableType{
     OBSTACLE
 };
 
-class Interactable
+class Interactable : public GridItem
 {
 protected:
     static int activeCount;
     /* data */
 public:
     Interactable(/* args */){
-
+        height = 0;
+        width = 0;
+        position = make_pair(0,0);
     };
     Interactable(int x, int y, int width, int height){
-
     };
     virtual bool interact(Robot* player) = 0;
     virtual InteractableType getType() = 0;
