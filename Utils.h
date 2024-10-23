@@ -13,8 +13,8 @@ private:
     /* data */
 public:
     Utils(/* args */);
-    std::pair<int, int> generateRandomPos(int gridWidth, int gridHeight);
-    double calculateDistance(std::pair<int, int> pos1, std::pair<int, int> pos2);
+    static std::pair<int, int> generateRandomPos(int gridWidth, int gridHeight);
+    static double calculateDistance(std::pair<int, int> pos1, std::pair<int, int> pos2);
     ~Utils();
 };
 
