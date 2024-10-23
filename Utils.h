@@ -22,7 +22,7 @@ class Utils : public Effect{
             int y1 = get<0>(pos2);
             int y2 = get<1>(pos2);
 
-            return sqrt((x2-x1) * (x2-x1) + (y2-y1) * (y2-y1));
+            return std::sqrt(std::pow(x2 - x1, 2) + std::pow(y2 - y1, 2));
         };
 };
 

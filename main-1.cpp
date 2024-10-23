@@ -10,6 +10,7 @@ int main(){
     // std::cout << "Initial starting position: (" << std::get<0>(cell.getPos()) << ", "
     //             << std::get<1>(cell.getPos()) << ")" << std::endl;
     // std::cout << "Initial starting type: " << cell.getType() << std::endl;
+    std::cout << "Initial starting type: " << Utils::calculateDistance(make_tuple(4,2), make_tuple(3,4)) << std::endl;
 
     // // cell.setPos(3, 4);
     // // cell.setType('B');
