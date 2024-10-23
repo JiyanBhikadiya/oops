@@ -13,6 +13,7 @@ public:
 
     };
     Robot(int gridWidth, int gridHeight){
+        this->health = 3;
         GridItem(0,0,gridWidth,gridHeight);
     };
     int getHealth(){
@@ -28,7 +29,7 @@ public:
     }; 
     bool move(int xOffset, int yOffset){
         if(abs(xOffset) <= this->getGridWidth() || abs(yOffset) <= this->getGridHeight()){
-            
+
         }
     };
     ~Robot(){

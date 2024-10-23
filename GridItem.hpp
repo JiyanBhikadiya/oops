@@ -9,33 +9,22 @@ protected:
     pair<int, int> position;
     int width, height;
 
-    static int activeCount; // Static count of active GridItems
-
-    // Increment the active count
-    static void incrementCount() {
-        ++activeCount;
-    }
-
-    // Decrement the active count
-    static void decrementCount() {
-        --activeCount;
-    }
+    static int activeCount;
 public:
     GridItem(){
+        activeCount++;
         this->position = make_pair(0,0);
         this->width = 0;
         this->height = 0;
-        incrementCount();
     }
     GridItem(int x, int y, int width, int height){
         this->position = make_pair(x,y);
         this->width = width;
         this->height = height;
-
-        incrementCount();
+        activeCount++;
     }
     virtual ~GridItem() {
-        decrementCount();
+        activeCount--;
     }
     void setCoordinates(int x, int y) {
         this->position = make_pair(x,y);
