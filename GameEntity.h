@@ -20,13 +20,18 @@ class GameEntity
         GameEntityType type;
     public:
         GameEntity(){
-            make_tuple(0,0);
+            position=make_tuple(0,0);
+            type = NoneType;
         };
-        GameEntity(int x, int y, char type){
-            make_tuple(x,y);
-            type = type;
+        // GameEntity(int x, int y, char type) : position(std::make_tuple(x, y)), type(type) {}
+        GameEntity(int x, int y, GameEntityType type1){
+            // make_tuple(x,y);
+            this->position = make_tuple(x,y);
+            // cout<<get<0>(position)<<endl;
+            type = type1;
         };
         std::tuple<int, int> getPos(){
+            cout<<get<0>(this->position)<<endl;
             return position;
         };
         GameEntityType getType(){
