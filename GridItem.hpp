@@ -41,7 +41,7 @@ public:
         return this->count;
     };
     virtual ~GridItem(){
-        this->count--;
+        count--;
     };
 
     // int GridItem::count = 0;

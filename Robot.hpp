@@ -11,9 +11,15 @@ public:
     Robot(/* args */){
 
     };
-    int getHealth();
-    void takeHit(); 
-    bool move(int xOffset, int yOffset);
+    int getHealth(){
+
+    };
+    void takeHit(){
+
+    }; 
+    bool move(int xOffset, int yOffset){
+        
+    };
     ~Robot(){
 
     };
