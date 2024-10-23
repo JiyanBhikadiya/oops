@@ -28,9 +28,17 @@ public:
         }
     }; 
     bool move(int xOffset, int yOffset){
-        if(abs(xOffset) <= this->getGridWidth() || abs(yOffset) <= this->getGridHeight()){
+         if ((xOffset != 0 && yOffset == 0) || (xOffset == 0 && yOffset != 0)) {
+            pair<int,int> newPos = make_pair(position.first + xOffset,position.second + yOffset);
 
+            // Check if the new position is within bounds
+            if (newPos.first >= 0 && newPos.first < width && newPos.second >= 0 && newPos.second < height) {
+                position = newPos;
+                return true;
+            }
         }
+        return false;
+    
     };
     ~Robot(){
 
