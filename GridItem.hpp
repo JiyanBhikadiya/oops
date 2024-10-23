@@ -1,5 +1,5 @@
-#ifndef GRIDITEM_H
-#define GRIDITEM_H
+#ifndef GRIDITEM_HPP
+#define GRIDITEM_HPP
 
 #include <iostream>
 
@@ -13,56 +13,36 @@ protected:
     static int count;
     /* data */
 public:
-    GridItem(int x, int y, int width, int height);
-    GridItem();
-    void setCoordinates(int x, int y);
-    std::pair<int,int> getCoordinates();
-    int getGridWidth();
-    int getGridHeight();
-    int getActiveGridItemCount();
-    virtual ~GridItem();
+    GridItem(int x, int y, int width, int height){
+        this->position = make_pair(x,y);
+        this->width = width;
+        this->height = height;
+        this->count++;
+    };
+    GridItem(){
+        this->width = 0;
+        this->height = 0;
+        this->position = make_pair(0,0);
+        this->count++;
+    };
+    void setCoordinates(int x, int y){
+        this->position = make_pair(x,y);
+    };
+    std::pair<int,int> getCoordinates(){
+        return std::pair<int, int>();
+    };
+    int getGridWidth(){
+        return this->width;
+    };
+    int getGridHeight(){
+        return this->height;
+    };
+    int getActiveGridItemCount(){
+        return this->count;
+    };
+    virtual ~GridItem(){
+        this->count--;
+    };
 };
-
-GridItem::GridItem(int x, int y, int width, int height) {
-    this->position = make_pair(x,y);
-
-    this->width = width;
-    this->height = height;
-    this->count++;
-}
-
-GridItem::GridItem(/* args */) {
-    this->width = 0;
-    this->height = 0;
-    this->position = make_pair(0,0);
-    this->count++;
-}
-
-void GridItem::setCoordinates(int x, int y) {
-    this->position = make_pair(x,y);
-}
-
-std::pair<int, int> GridItem::getCoordinates() {
-  return std::pair<int, int>();
-}
-
-int GridItem::getGridWidth() {
-    return this->width;
-}
-
-int GridItem::getGridHeight() {
-    return this->height;
-}
-
-int GridItem::getActiveGridItemCount() {
-    return this->count;
-}
-
-GridItem::~GridItem()
-{
-    this->count--;
-}
-
-static int count = 0;
 
 #endif

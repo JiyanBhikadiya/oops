@@ -1,7 +1,9 @@
 #ifndef ROBOT_H
 #define ROBOT_H
 
-class Robot
+#include "GridItem.hpp"
+
+class Robot : public GridItem
 {
 private:
     /* data */
