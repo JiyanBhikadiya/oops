@@ -23,11 +23,13 @@ public:
     GameEntity(int x, int y, char type);
     std::tuple<int, int> getPos();
     GameEntityType getType();
+    void setType(GameEntityType type);
+    void setPos(tuple<int, int> pos);
     ~GameEntity();
 };
 
 GameEntity::GameEntity(int x, int y, char type) {
-    position = make_pair(x,y);
+    position = make_tuple(x,y);
     switch (type)
     {
     case 'E':
@@ -51,8 +53,16 @@ std::tuple<int, int> GameEntity::getPos() {
   return position;
 }
 
-inline GameEntityType GameEntity::getType() {
+GameEntityType GameEntity::getType() {
     return type;
+}
+
+void GameEntity::setType(GameEntityType type) {
+    this->type = type;
+}
+
+void GameEntity::setPos(tuple<int, int> pos) {
+    this->position = pos;
 }
 
 GameEntity::~GameEntity() {}
