@@ -44,7 +44,7 @@ public:
         this->count--;
     };
 
-    int GridItem::count = 0;
+    // int GridItem::count = 0;
 };
 
 #endif

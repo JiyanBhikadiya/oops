@@ -8,17 +8,15 @@ class Robot : public GridItem
 private:
     /* data */
 public:
-    Robot(/* args */);
-    ~Robot();
+    Robot(/* args */){
+
+    };
+    int getHealth();
+    void takeHit(); 
+    bool move(int xOffset, int yOffset);
+    ~Robot(){
+
+    };
 };
-
-Robot::Robot(/* args */)
-{
-}
-
-Robot::~Robot()
-{
-}
-
 
 #endif
