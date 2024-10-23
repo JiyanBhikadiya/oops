@@ -1,10 +1,12 @@
 #include "Utils.h"
 
-tuple<int, int> Utils::generateRandomPos(int gridWidth, int gridHeight) {
-    int x = rand() % gridWidth;
-    int y = rand() % gridHeight;
+Utils::Utils() {}
 
-    return make_tuple(x, y);
+tuple<int, int> Utils::generateRandomPos(int gridWidth, int gridHeight) {
+  int x = rand() % gridWidth;
+  int y = rand() % gridHeight;
+
+  return make_tuple(x, y);
 }
 
 double Utils::calculateDistance(tuple<int, int> pos1,tuple<int, int> pos2) {

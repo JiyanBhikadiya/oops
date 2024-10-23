@@ -19,7 +19,8 @@ class GameEntity
         tuple<int, int> position;
         GameEntityType type;
     public:
-        GameEntity(int x, int y, char type);
+        GameEntity();
+        // GameEntity(int x, int y, char type);
         std::tuple<int, int> getPos();
         GameEntityType getType();
 };
