@@ -8,14 +8,19 @@
 class Goal : public Interactable
 {
 private:
-    int height,width;
-    /* data */
 public:
-    Goal(int width, int height) : width(width), height(height) {}
+    Goal(int width, int height) : Interactable(width-1,height-1,1,1){
+    }
 
     bool interact(Robot* player) override {
         double distance = std::sqrt(std::pow(width - (*player).getCoordinates().first, 2) + std::pow(height - (*player).getCoordinates().second, 2));
-        return distance == 0;
+
+        if(distance == 0){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
     InteractableType getType() override {
