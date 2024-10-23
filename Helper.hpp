@@ -14,7 +14,7 @@ public:
 
     };
     static double euclideanDistance(std::pair<int, int> item1, std::pair<int, int> item2){
-        return sqrt(pow((item1.first-item2.first),2) - pow((item1.second-item2.second),2));
+        return sqrt(pow((item2.first-item1.first),2) + pow((item2.second-item1.second),2));
     };
     ~Helper(){
 
