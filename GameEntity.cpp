@@ -1,8 +1,13 @@
 #include "GameEntity.h"
 
-GameEntity::GameEntity() {}
+GameEntity::GameEntity() {
+    make_tuple(0,0);
+}
 
-// GameEntity::GameEntity(int x, int y, char type) {}
+GameEntity::GameEntity(int x, int y, char type) {
+    make_tuple(x,y);
+    type = type;
+}
 
 std::tuple<int, int> GameEntity::getPos() {
     return position;

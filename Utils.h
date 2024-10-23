@@ -2,15 +2,16 @@
 #define UTILS_H
 
 #include "Effect.h"
-#include <math.h>
+#include <cmath>
 #include <random>
+#include <cstdlib>
 
 class Utils : public Effect{
     protected:
     public:
         Utils();
-        tuple<int, int> generateRandomPos(int gridWidth, int gridHeight);
-        double calculateDistance(std::tuple<int, int> pos1, std::tuple<int, int> pos2);
+        static tuple<int, int> generateRandomPos(int gridWidth, int gridHeight);
+        static double calculateDistance(std::tuple<int, int> pos1, std::tuple<int, int> pos2);
 };
 
 

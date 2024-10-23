@@ -7,7 +7,7 @@ class Effect : public GameEntity{
     protected:
     public:
         Effect();
-        virtual void apply(GameEntity& entity);
+        virtual void apply(GameEntity& entity) = 0;
 };
 
 #endif

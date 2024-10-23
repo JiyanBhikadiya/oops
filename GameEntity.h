@@ -20,7 +20,7 @@ class GameEntity
         GameEntityType type;
     public:
         GameEntity();
-        // GameEntity(int x, int y, char type);
+        GameEntity(int x, int y, char type);
         std::tuple<int, int> getPos();
         GameEntityType getType();
 };
