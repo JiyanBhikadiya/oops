@@ -17,13 +17,13 @@ public:
         this->position = make_pair(x,y);
         this->width = width;
         this->height = height;
-        this->count++;
+        count++;
     };
     GridItem(){
         this->width = 0;
         this->height = 0;
         this->position = make_pair(0,0);
-        this->count++;
+        count++;
     };
     void setCoordinates(int x, int y){
         this->position = make_pair(x,y);
@@ -38,7 +38,7 @@ public:
         return this->height;
     };
     int getActiveGridItemCount(){
-        return this->count;
+        return count;
     };
     virtual ~GridItem(){
         count--;
