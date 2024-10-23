@@ -29,9 +29,12 @@ public:
     }; 
     bool move(int xOffset, int yOffset){
          if ((xOffset != 0 && yOffset == 0) || (xOffset == 0 && yOffset != 0)) {
-            this->position.first += xOffset;
-            this->position.second += yOffset;
-            // setCoordinates(xOffset,yOffset);
+            int x = this->position.first + xOffset;
+            int y = this->position.second + yOffset;
+
+            if(x >= 0 && x <= width && y >= 0 && y <= height){
+                setCoordinates(x,y);
+            }
             return true;
         }
         return false;

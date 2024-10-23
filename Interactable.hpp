@@ -11,7 +11,8 @@ enum InteractableType{
 
 class Interactable
 {
-private:
+protected:
+    static int activeCount;
     /* data */
 public:
     Interactable(/* args */){
@@ -23,11 +24,11 @@ public:
     virtual bool interact(Robot* player) = 0;
     virtual InteractableType getType() = 0;
     int getActiveInteractableCount(){
-
+        return activeCount;
     };
     ~Interactable(){
 
     };
 };
-
+int GridItem::activeCount = 0;
 #endif
