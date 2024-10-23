@@ -2,6 +2,7 @@
 #define GAMEENTITY_H
 
 #include <iostream>
+#include <tuple>
 
 using namespace std;
 
@@ -15,12 +16,12 @@ enum GameEntityType{
 class GameEntity
 {
 protected:
-    pair<int, int> position;
+    tuple<int, int> position;
     GameEntityType type;
     /* data */
 public:
     GameEntity(int x, int y, char type);
-    std::pair<int, int> getPos();
+    std::tuple<int, int> getPos();
     GameEntityType getType();
     ~GameEntity();
 };
@@ -46,7 +47,7 @@ GameEntity::GameEntity(int x, int y, char type) {
     }
 }
 
-std::pair<int, int> GameEntity::getPos() {
+std::tuple<int, int> GameEntity::getPos() {
   return position;
 }
 
