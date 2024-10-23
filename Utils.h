@@ -6,7 +6,7 @@
 #include <random>
 #include <cstdlib>
 
-class Utils : public Effect{
+class Utils{
     protected:
     public:
         Utils(){};

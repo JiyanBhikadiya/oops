@@ -3,10 +3,10 @@
 
 #include "GameEntity.h"
 
-class Effect : public GameEntity{
+class Effect{
     protected:
     public:
-        Effect();
+        Effect(){};
         virtual void apply(GameEntity& entity) = 0;
 };
 

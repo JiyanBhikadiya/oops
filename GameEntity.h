@@ -23,7 +23,6 @@ class GameEntity
             make_tuple(0,0);
         };
         GameEntity(int x, int y, char type){
-            cout<<"Hello"<<endl;
             make_tuple(x,y);
             type = type;
         };
