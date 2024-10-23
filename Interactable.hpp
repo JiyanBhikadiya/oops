@@ -19,8 +19,13 @@ public:
         height = 0;
         width = 0;
         position = make_pair(0,0);
+        activeCount++;
     };
     Interactable(int x, int y, int width, int height){
+        position = make_pair(x,y);
+        this->width = width;
+        this->height = height;
+        activeCount++;
     };
     virtual bool interact(Robot* player) = 0;
     virtual InteractableType getType() = 0;
@@ -28,8 +33,8 @@ public:
         return activeCount;
     };
     ~Interactable(){
-
+        activeCount--;
     };
 };
-int GridItem::activeCount = 0;
+int Interactable::activeCount = 0;
 #endif
