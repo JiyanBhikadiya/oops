@@ -5,6 +5,7 @@ GameEntity::GameEntity() {
 }
 
 GameEntity::GameEntity(int x, int y, char type) {
+    cout<<"Hello"<<endl;
     make_tuple(x,y);
     type = type;
 }
