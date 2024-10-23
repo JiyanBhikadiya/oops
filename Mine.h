@@ -10,7 +10,7 @@ private:
     /* data */
 public:
     Mine(int x,int y);
-    Explosion Mine::explode();
+    Explosion explode();
     ~Mine();
 };
 

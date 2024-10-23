@@ -27,4 +27,4 @@ Explosion::~Explosion()
 }
 
 
-#endif EXPLOSION_H
+#endif
