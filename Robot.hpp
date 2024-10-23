@@ -28,14 +28,13 @@ public:
         }
     }; 
     bool move(int xOffset, int yOffset){
-         if(xOffset <= 2 && yOffset <= 2){
+         if ((xOffset != 0 && yOffset == 0) || (xOffset == 0 && yOffset != 0)) {
             this->position.first += xOffset;
             this->position.second += yOffset;
+            // setCoordinates(xOffset,yOffset);
             return true;
         }
-        else{
-            return false;
-        }
+        return false;
     
     };
     ~Robot(){

@@ -1,7 +1,8 @@
 #ifndef INTERACTABLE_H
 #define INTERACTABLE_H
 
-#include "GridItem.h"
+#include "GridItem.hpp"
+#include "Robot.hpp"
 
 enum InteractableType{
     GOAL,
@@ -14,6 +15,14 @@ private:
     /* data */
 public:
     Interactable(/* args */){
+
+    };
+    Interactable(int x, int y, int width, int height){
+
+    };
+    virtual bool interact(Robot* player) = 0;
+    virtual InteractableType getType() = 0;
+    int getActiveInteractableCount(){
 
     };
     ~Interactable(){
