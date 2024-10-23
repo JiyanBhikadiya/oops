@@ -36,7 +36,7 @@ double Utils::calculateDistance(std::tuple<int, int> pos1,std::tuple<int, int> p
     int x2 = get<0>(pos2);
     int y2 = get<1>(pos2);
 
-  return sqrt(pow(x2,x1) + pow(y2,y1));
+  return sqrt(pow((x2-x1),2) + pow((y2,y1),2));
 }
 
 Utils::~Utils()
