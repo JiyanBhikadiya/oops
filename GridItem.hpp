@@ -43,6 +43,8 @@ public:
     virtual ~GridItem(){
         this->count--;
     };
+
+    int GridItem::count = 0;
 };
 
 #endif
