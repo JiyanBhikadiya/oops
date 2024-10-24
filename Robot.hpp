@@ -36,28 +36,11 @@ public:
         int y = position.second + yOffset;
 
         if (x >= 0 && x < width && y >= 0 && y < height) {
-            
             setCoordinates(x,y);
             return true;
         }
 
         return false;
-
-
-
-        //  if ((xOffset != 0 && yOffset == 0) || (xOffset == 0 && yOffset != 0)) {
-        //     int x = this->position.first + xOffset;
-        //     int y = this->position.second + yOffset;
-
-        //     if(x >= 0 && x <= width){
-        //         this->position.first = x;
-        //     }
-        //     if(y >= 0 && y <= height){
-        //         this->position.second = y;
-        //     }
-        //     return true;
-        // }
-        // return false;
     
     };
     ~Robot(){
