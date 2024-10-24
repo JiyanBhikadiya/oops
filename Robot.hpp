@@ -36,6 +36,8 @@ public:
         int y = position.second + yOffset;
 
         if (x >= 0 && x < width && y >= 0 && y < height) {
+            this->position.first = x;
+            this->position.second = y;
             setCoordinates(x,y);
             return true;
         }
